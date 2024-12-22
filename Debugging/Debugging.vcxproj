@@ -37,6 +37,7 @@
     <ProjectGuid>{45013eb3-8e61-43fb-b4c0-783987cb7dd3}</ProjectGuid>
     <RootNamespace>TestGit</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Debugging</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
