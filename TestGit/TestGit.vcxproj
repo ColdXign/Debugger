@@ -19,10 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Source\Public\testheader.h" />
+    <ClInclude Include="..\Source\Public\Main.h" />
+    <ClInclude Include="..\Source\Public\pch.h" />
+    <ClInclude Include="..\Source\Public\ViewPEHeader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Source\Private\TestGit.cpp" />
+    <ClCompile Include="..\Source\Private\Main.cpp" />
+    <ClCompile Include="..\Source\Private\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="..\Source\Private\ViewPEHeader.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -81,6 +88,12 @@
     <IncludePath>C:\PersonalProject\TestGit\Source\Public;$(IncludePath)</IncludePath>
     <OutDir>..\Binary\Debug\</OutDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\Binary\Release</OutDir>
+    <TargetName>VIEW</TargetName>
+    <IncludePath>C:\PersonalProject\TestGit\Source\Public;$(IncludePath)</IncludePath>
+    <SourcePath>C:\PersonalProject\TestGit\Source\Private;$(SourcePath)</SourcePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -115,6 +128,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

@@ -13,15 +13,36 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Source Files\Private">
+      <UniqueIdentifier>{9654e81a-ad5a-42f3-b90a-c69d99830a00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Header Files\Precompiled">
+      <UniqueIdentifier>{3f4dacd0-fe4e-434b-a317-1fc54358b5d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Header Files\Public">
+      <UniqueIdentifier>{6913c66a-4c2e-4dd8-83d2-b8d378df2d70}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Source\Public\testheader.h">
-      <Filter>Source Files\Header Files</Filter>
+    <ClInclude Include="..\Source\Public\pch.h">
+      <Filter>Source Files\Header Files\Precompiled</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Public\Main.h">
+      <Filter>Source Files\Header Files\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Public\ViewPEHeader.h">
+      <Filter>Source Files\Header Files\Public</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Source\Private\TestGit.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="..\Source\Private\Main.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Private\ViewPEHeader.cpp">
+      <Filter>Source Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\Private\pch.cpp">
+      <Filter>Source Files\Header Files\Precompiled</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
